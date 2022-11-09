@@ -67,6 +67,7 @@ function Total(props) {
   );
 }
 
+
 function App() {
   const course = "Half Stack application development";
 
@@ -96,5 +97,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
