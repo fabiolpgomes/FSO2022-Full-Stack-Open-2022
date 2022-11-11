@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const Button = (props) => {
+	
 	return <button onClick={props.onClick}>{props.text}</button>;
 };
 
@@ -9,6 +10,7 @@ const Display = (props) => {
 };
 
 const Anecdotescomponent = (props) => {
+	console.log('props value is', props)
 	return (
 		<div>
 			<p>{props.text}</p>
@@ -53,6 +55,7 @@ function App() {
 	};
 
 	const handleVote = () => {
+		
 		const allVotes = [...vote];
 		allVotes[selected] += 1;
 		setVote(allVotes);
@@ -62,9 +65,10 @@ function App() {
 
 	return (
 		<div className="App">
-			<Display text="Anecdote of the day" />
+			<Display text="ANECDOTES of the day" />
 			<Anecdotescomponent text={anecdotes[selected]} vote={vote[selected]} />
-
+			<div> *the app is used by pressing the buttons</div> 
+			<br></br>
 			<Button onClick={handleVote} text="vote" />
 			<Button onClick={handleButton} text="next anecdote" />
 
@@ -74,5 +78,6 @@ function App() {
 		</div>
 	);
 }
+
 
 export default App;
